@@ -1,4 +1,7 @@
--- When the imposter is sus
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
 
 local TheGUI = Instance.new("ScreenGui")
 local TheMainframe = Instance.new("Frame")
@@ -12,19 +15,21 @@ local Susdoll = Instance.new("TextButton")
 --Properties:
 
 TheGUI.Name = "The GUI"
-TheGUI.Parent = game.CoreGui
+TheGUI.Parent = game.Workspace
 
 TheMainframe.Name = "The Main frame"
 TheMainframe.Parent = TheGUI
+TheMainframe.Active = true
 TheMainframe.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
 TheMainframe.BorderColor3 = Color3.fromRGB(255, 255, 255)
 TheMainframe.Position = UDim2.new(0.695744693, 0, 0.449079692, 0)
 TheMainframe.Size = UDim2.new(0, 394, 0, 385)
 TheMainframe.Active = true
-TheMainframe.draggable = true
+TheMainframe.Draggable = true
 
 Title.Name = "Title"
 Title.Parent = TheMainframe
+Title.Active = true
 Title.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
 Title.BorderColor3 = Color3.fromRGB(255, 255, 255)
 Title.Size = UDim2.new(0, 394, 0, 49)
@@ -59,7 +64,7 @@ Thehub.Text = "Selexity hub"
 Thehub.TextColor3 = Color3.fromRGB(255, 255, 255)
 Thehub.TextSize = 14.000
 Thehub.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/stangithuboffical/selexity/main/Main", true))()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cstly/Scripts/main/Selexity.lua'),true))()
 end)
 
 Spider.Name = "Spider"
@@ -586,8 +591,10 @@ Netbypass.Text = "Net bypass"
 Netbypass.TextColor3 = Color3.fromRGB(255, 255, 255)
 Netbypass.TextSize = 14.000
 Netbypass.MouseButton1Down:connect(function()
-	loadstring(game:HttpGetAsync("https://paste.ee/r/qCWa6/0"))()
-
+	--|| Settings:
+	local NetEnabled = true -- Keep this on true or this script is basically useless
+	--|| Script Loadstring:
+	loadstring(game:HttpGet('https://paste.ee/r/HRAcR'))()  
 end)
 
 Susdoll.Name = "Susdoll"
